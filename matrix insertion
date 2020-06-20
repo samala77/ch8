@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,*i,*j,sum=0;
+    int c[10][10];
+    for(a=0;a<3;a++)
+    {
+        for(b=0;b<3;b++)
+        {
+         i=&c[a][b];
+            printf("element - [%d][%d]:",a,b);
+            scanf("%d",i);
+        }
+    }
+    printf("The matrix is:\n");
+    for(a=0;a<3;a++)
+    {
+        for(b=0;b<3;b++)
+        {
+            j=&c[a][b];
+            printf("%d ",*j);
+        }
+        printf("\n");
+        
+    }
+    for(a=0;a<3;a++)
+    {
+        for(b=0;b<3;b++)
+        {
+        if(a==b)
+        {
+            sum=sum+(c[a][b]);
+        }
+        }
+    }
+ printf("%d",sum);
+}
